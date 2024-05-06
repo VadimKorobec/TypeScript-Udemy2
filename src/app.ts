@@ -1,11 +1,10 @@
 //autobind decorator
 function autobind(
-  target: any,
-  methodName: string,
+  _: any,
+  _2: string,
   descriptor: PropertyDescriptor
 ) {
-  console.log(target);
-  console.log(methodName);
+ 
   const originalMethod = descriptor.value;
   const adjDescriptor: PropertyDescriptor = {
     configurable: true,
